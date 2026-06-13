@@ -1,6 +1,7 @@
-
+import AudioPlayer from 'react-h5-audio-player';
 import useSound from 'use-sound';
 
+import 'react-h5-audio-player/lib/styles.css';
 interface SoundButtonProps {
   soundUrl: string; 
   buttonText: string;
@@ -36,9 +37,17 @@ export const SoundButton = ({ soundUrl, buttonText }: SoundButtonProps) => {
   const [play] = useSound(soundUrl);
 
   return (
-    <button onClick={() => play()}>
-        {buttonText}
-    </button>
+    <AudioPlayer
+
+    className="my-audio-player"
+    autoPlay
+    src={soundUrl}
+    onPlay={() => console.log("onPlay")}
+    // other props here
+  />
+    // <button onClick={() => play()}>
+    //     {buttonText}
+    // </button>
 
 
 

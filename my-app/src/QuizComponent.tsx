@@ -23,7 +23,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
   const [score, setScore] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isFinished, setIsFinished] = useState<boolean>(false);
-  const [timer, setTimer] = useState<number>(15);
+//   const [timer, setTimer] = useState<number>(15);
 
   const currentQuestion = questions[currentIndex];
 
