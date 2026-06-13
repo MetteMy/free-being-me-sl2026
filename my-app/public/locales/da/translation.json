@@ -1,3 +1,14 @@
 {
-  "title": "Quiz titel"
+  "title": "Quiz titel",
+
+  
+  "quiz": {
+    "questionProgress": "Spørgsmål {{current}} af {{total}}",
+    "playSound": "Afspil lyd",
+    "next": "Næste",
+    "finish": "Færdiggør",
+    "quizFinished": "Quizzen er slut",
+    "finalScore": "Jeres resultat er: {{score}} / {{total}}"
+  }
 }
+
