@@ -8,5 +8,16 @@
     "finish": "Finish",
     "quizFinished": "Quiz Finished!",
     "finalScore": "Your Final Score: {{score}} / {{total}}"
+  }, 
+  "quizQuestions": {
+    "1": {
+      "question": "Which hook is used to handle state in React?",
+      "options": [
+        "useState",
+        "useEffect",
+        "useContext",
+        "useReducer"
+      ]
+    }
   }
 }

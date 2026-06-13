@@ -2,8 +2,6 @@
 import './App.css'
 import {SoundButton } from './AudioComponent'
 import boopSfx from '../sounds/Grumpy ghost.m4a';
-
-
 import React from 'react';
 import { Quiz, type Question } from './QuizComponent';
 import { useTranslation } from 'react-i18next';
@@ -11,12 +9,16 @@ import { useTranslation } from 'react-i18next';
 const myQuestions: Question[] = [
   {
     id: 1,
-    questionText: "Which hook is used to handle state in React?",
+    questionTextKey: "quizQuestions.1.question",
     QuestionUrl: boopSfx,
-    options: ["useState", "useEffect", "useContext", "useReducer"],
-    correctAnswer: "useState"
-  },
-  // Add more questions here...
+    optionKeys: [
+      "quizQuestions.1.options.0",
+      "quizQuestions.1.options.1",
+      "quizQuestions.1.options.2",
+      "quizQuestions.1.options.3"
+    ],
+    correctAnswerKey: "quizQuestions.1.options.0"
+  }
 ];
 
 export function LanguageChanger() {

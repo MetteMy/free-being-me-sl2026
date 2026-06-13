@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { SoundButton } from './AudioComponent';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { SoundButton } from "./AudioComponent";
 
 // Data Interfaces
 export interface Question {
   id: number;
-  questionText: string;
+  questionTextKey: string;
   QuestionUrl: string;
-  options: string[];
-  correctAnswer: string;
+  optionKeys: string[];
+  correctAnswerKey: string;
 }
 
 interface QuizProps {
@@ -16,10 +16,7 @@ interface QuizProps {
   onQuizComplete: (score: number) => void;
 }
 
-export const Quiz: React.FC<QuizProps> = ({
-  questions,
-  onQuizComplete,
-}) => {
+export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
   const { t } = useTranslation();
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -35,7 +32,7 @@ export const Quiz: React.FC<QuizProps> = ({
   };
 
   const handleSubmit = () => {
-    if (selectedOption === currentQuestion.correctAnswer) {
+    if (selectedOption === currentQuestion.correctAnswerKey) {
       setScore((prev) => prev + 1);
     }
     handleNext();
@@ -56,9 +53,9 @@ export const Quiz: React.FC<QuizProps> = ({
   if (isFinished) {
     return (
       <div className="quiz-container">
-        <h2>{t('quiz.quizFinished')}</h2>
+        <h2>{t("quiz.quizFinished")}</h2>
         <p>
-          {t('quiz.finalScore', {
+          {t("quiz.finalScore", {
             score,
             total: questions.length,
           })}
@@ -71,32 +68,24 @@ export const Quiz: React.FC<QuizProps> = ({
     <div className="quiz-container">
       <div className="quiz-header">
         <span>
-          {t('quiz.questionProgress', {
+          {t("quiz.questionProgress", {
             current: currentIndex + 1,
             total: questions.length,
           })}
         </span>
       </div>
 
-      <h2 className="question-text">
-        {currentQuestion?.questionText}
-      </h2>
+      <h2>{t(currentQuestion.questionTextKey)}</h2>
 
       <SoundButton
         soundUrl={currentQuestion?.QuestionUrl}
-        buttonText={t('quiz.playSound')}
+        buttonText={t("quiz.playSound")}
       />
 
       <div className="options-container">
-        {currentQuestion?.options.map((option, index) => (
-          <button
-            key={index}
-            onClick={() => handleSelectOption(option)}
-            className={`option-btn ${
-              selectedOption === option ? 'selected' : ''
-            }`}
-          >
-            {option}
+        {currentQuestion.optionKeys.map((optionKey) => (
+          <button key={optionKey} onClick={() => handleSelectOption(optionKey)}>
+            {t(optionKey)}
           </button>
         ))}
       </div>
@@ -107,8 +96,8 @@ export const Quiz: React.FC<QuizProps> = ({
         className="submit-btn"
       >
         {currentIndex === questions.length - 1
-          ? t('quiz.finish')
-          : t('quiz.next')}
+          ? t("quiz.finish")
+          : t("quiz.next")}
       </button>
     </div>
   );
