@@ -156,6 +156,9 @@ button {
 .option-label input {
   display: none;
 }
+.option-label span {
+  flex: 1;
+}
 .option-label.selected {
   border-color: var(--darkBlue);
   background: var(--darkBlue);
@@ -218,3 +221,45 @@ button {
 .sound-button:active {
   transform: scale(0.92);
 }
+
+.option-label.correct {
+  background: #1b8d41;
+  border-color: #1b8d41;
+  color: var(--white);
+  animation: pop 0.25s ease;
+}
+
+.option-label.wrong {
+  background: #ff4d4d;
+  border-color: #ff4d4d;
+  color: var(--white);
+  animation: shake 0.3s ease;
+}
+
+.option-label.selected {
+  transform: scale(1.01);
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* .options-container.submitted .option-label:not(.correct):not(.wrong) {
+  opacity: 0.4;
+} */

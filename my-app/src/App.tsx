@@ -27,7 +27,7 @@ export function LanguageChanger() {
     i18n.changeLanguage(lng);
   };
   return (
-    <div>
+    <div >
     
       <button onClick={() => changeLanguage("en")}>English</button>
       <button onClick={() => changeLanguage("da")}>Danish</button>

@@ -24,6 +24,7 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
   const [score, setScore] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isFinished, setIsFinished] = useState<boolean>(false);
+  const [showResult, setShowResult] = useState(false);
 
   //   const [timer, setTimer] = useState<number>(15);
 
@@ -34,12 +35,17 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
   };
 
   const handleSubmit = () => {
+    setShowResult(true);
+
     if (selectedOption === currentQuestion.correctAnswerKey) {
       setScore((prev) => prev + 1);
     }
-    handleNext();
-  };
 
+    setTimeout(() => {
+      handleNext();
+      setShowResult(false);
+    }, 1200);
+  };
   const handleNext = () => {
     const nextIndex = currentIndex + 1;
 
@@ -84,24 +90,31 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
         // buttonText={t("quiz.playSound")}
       />
 
-      <div className="options-container">
-        {currentQuestion.optionKeys.map((optionKey) => (
-          <label
-            key={optionKey}
-            className={`option-label ${
-              selectedOption === optionKey ? "selected" : ""
-            }`}
-          >
-            <input
-              type="radio"
-              name="answer"
-              value={optionKey}
-              checked={selectedOption === optionKey}
-              onChange={(e) => setSelectedOption(e.target.value)}
-            />
-            <span>{t(optionKey)}</span>
-          </label>
-        ))}
+      <div className={`options-container ${showResult ? "submitted" : ""}`}>
+        {currentQuestion.optionKeys.map((optionKey) => {
+          const isCorrect = optionKey === currentQuestion.correctAnswerKey;
+          const isSelected = optionKey === selectedOption;
+
+          return (
+            <label
+              key={optionKey}
+              className={`option-label
+          ${showResult && isCorrect ? "correct" : ""}
+          ${showResult && isSelected && !isCorrect ? "wrong" : ""}
+          ${selectedOption === optionKey ? "selected" : ""}
+        `}
+            >
+              <input
+                type="radio"
+                name="answer"
+                value={optionKey}
+                checked={selectedOption === optionKey}
+                onChange={(e) => setSelectedOption(e.target.value)}
+              />
+              <span>{t(optionKey)}</span>
+            </label>
+          );
+        })}
       </div>
 
       <button
