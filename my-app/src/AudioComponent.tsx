@@ -27,7 +27,6 @@ interface SoundButtonProps {
 
 
 // }
-
 import { useRef, useState } from "react";
 
 export function SoundButton({ soundUrl }: { soundUrl: string }) {
@@ -53,16 +52,17 @@ export function SoundButton({ soundUrl }: { soundUrl: string }) {
   };
 
   return (
-    <>
-      <button className="sound-button" onClick={toggle}>
+    <div className="sound-wrapper">
+      <button
+        className={`sound-button ${isPlaying ? "playing" : ""}`}
+        onClick={toggle}
+        type="button"
+      >
         {isPlaying ? "⏸" : "▶"}
       </button>
-
-      <audio ref={audioRef} src={soundUrl} />
-    </>
+    </div>
   );
 }
-
 // export const SoundButton = ({ soundUrl, buttonText }: SoundButtonProps) => {
 
 //   const [play] = useSound(soundUrl);
