@@ -28,29 +28,60 @@ interface SoundButtonProps {
 
 // }
 
+import { useRef, useState } from "react";
 
+export function SoundButton({ soundUrl }: { soundUrl: string }) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
+  const toggle = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio(soundUrl);
 
+      audioRef.current.addEventListener("ended", () => {
+        setIsPlaying(false);
+      });
+    }
 
-export const SoundButton = ({ soundUrl, buttonText }: SoundButtonProps) => {
-
-  const [play] = useSound(soundUrl);
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
 
   return (
-    <AudioPlayer
+    <>
+      <button className="sound-button" onClick={toggle}>
+        {isPlaying ? "⏸" : "▶"}
+      </button>
 
-    className="my-audio-player"
-    autoPlay
-    src={soundUrl}
-    onPlay={() => console.log("onPlay")}
-    // other props here
-  />
-    // <button onClick={() => play()}>
-    //     {buttonText}
-    // </button>
-
-
-
-
+      <audio ref={audioRef} src={soundUrl} />
+    </>
   );
 }
+
+// export const SoundButton = ({ soundUrl, buttonText }: SoundButtonProps) => {
+
+//   const [play] = useSound(soundUrl);
+
+//   return (
+//     <div className="audio-wrapper">
+//     <AudioPlayer
+
+//     className="my-audio-player"
+//     autoPlay
+//     src={soundUrl}
+//     onPlay={() => console.log("onPlay")}
+//     // other props here
+//   /></div>
+//     // <button onClick={() => play()}>
+//     //     {buttonText}
+//     // </button>
+//   );
+// }
+
+
+

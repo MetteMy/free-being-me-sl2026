@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SoundButton } from "./AudioComponent";
+import { selectButton } from "./selectButton";
 
 // Data Interfaces
 export interface Question {
@@ -23,7 +24,8 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
   const [score, setScore] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isFinished, setIsFinished] = useState<boolean>(false);
-//   const [timer, setTimer] = useState<number>(15);
+
+  //   const [timer, setTimer] = useState<number>(15);
 
   const currentQuestion = questions[currentIndex];
 
@@ -79,21 +81,33 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
 
       <SoundButton
         soundUrl={currentQuestion?.QuestionUrl}
-        buttonText={t("quiz.playSound")}
+        // buttonText={t("quiz.playSound")}
       />
 
       <div className="options-container">
         {currentQuestion.optionKeys.map((optionKey) => (
-          <button key={optionKey} onClick={() => handleSelectOption(optionKey)}>
-            {t(optionKey)}
-          </button>
+          <label
+            key={optionKey}
+            className={`option-label ${
+              selectedOption === optionKey ? "selected" : ""
+            }`}
+          >
+            <input
+              type="radio"
+              name="answer"
+              value={optionKey}
+              checked={selectedOption === optionKey}
+              onChange={(e) => setSelectedOption(e.target.value)}
+            />
+            <span>{t(optionKey)}</span>
+          </label>
         ))}
       </div>
 
       <button
         onClick={handleSubmit}
         disabled={!selectedOption}
-        className="submit-btn"
+        className="button--yellow"
       >
         {currentIndex === questions.length - 1
           ? t("quiz.finish")
