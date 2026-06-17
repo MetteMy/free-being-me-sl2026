@@ -168,7 +168,8 @@ button {
 .sound-wrapper {
   display: flex;
   justify-content: center;
-  margin: 16px 0;
+  margin: 30px 0;
+
 }.sound-button {
   width: 72px;
   height: 72px;
@@ -190,6 +191,8 @@ button {
   position: relative;
 
   transition: transform 0.2s ease;
+
+
 }.sound-button.playing::before,
 .sound-button.playing::after {
   content: "";
@@ -220,6 +223,10 @@ button {
 
 .sound-button:active {
   transform: scale(0.92);
+}
+.sound-button svg {
+  width: 22px;
+  height: 22px;
 }
 
 .option-label.correct {
@@ -260,6 +267,46 @@ button {
   100% { transform: translateX(0); }
 }
 
-/* .options-container.submitted .option-label:not(.correct):not(.wrong) {
-  opacity: 0.4;
-} */
+.lang-switcher {
+  display: inline-flex;
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 9999px;
+  padding: 4px;
+  
+  gap: 4px;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* pushes to right */
+  align-items: center;
+  /* background-color: var(--darkBlue); */
+  padding: 12px 0;
+
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+
+  padding: 8px 14px;
+  border-radius: 9999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  color: var(--text);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: white;
+}
+
+.lang-btn:active {
+  transform: scale(0.95);
+}

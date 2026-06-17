@@ -11,12 +11,12 @@
   }, 
   "quizQuestions": {
     "1": {
-      "question": "Which hook is used to handle state in React?",
+      "question": "What sound do you hear?",
       "options": [
-        "useState",
-        "useEffect",
-        "useContext",
-        "useReducer"
+        "bird",
+        "giraffe",
+        "rain",
+        "scream"
       ]
     }
   }

@@ -1,5 +1,6 @@
 import AudioPlayer from 'react-h5-audio-player';
 import useSound from 'use-sound';
+import { FaPlay, FaPause } from "react-icons/fa";
 
 import 'react-h5-audio-player/lib/styles.css';
 interface SoundButtonProps {
@@ -58,7 +59,7 @@ export function SoundButton({ soundUrl }: { soundUrl: string }) {
         onClick={toggle}
         type="button"
       >
-        {isPlaying ? "⏸" : "▶"}
+         {isPlaying ? <FaPause /> : <FaPlay />}
       </button>
     </div>
   );

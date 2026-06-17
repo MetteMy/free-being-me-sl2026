@@ -21,16 +21,38 @@ const myQuestions: Question[] = [
   }
 ];
 
+
+
 export function LanguageChanger() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
+
   return (
-    <div >
-    
-      <button onClick={() => changeLanguage("en")}>English</button>
-      <button onClick={() => changeLanguage("da")}>Danish</button>
+    <div className="lang-switcher">
+      <button
+        className={`lang-btn ${i18n.language === "en" ? "active" : ""}`}
+        onClick={() => changeLanguage("en")}
+      >
+        EN
+      </button>
+
+      <button
+        className={`lang-btn ${i18n.language === "da" ? "active" : ""}`}
+        onClick={() => changeLanguage("da")}
+      >
+        DA
+      </button>
+    </div>
+  );
+}
+
+export function Header() {
+  return (
+    <div className="header">
+      <LanguageChanger />
     </div>
   );
 }
@@ -45,7 +67,7 @@ const App = () => {
   return (
     <div className="app">
 
-      <LanguageChanger></LanguageChanger>
+      <Header></Header>
       <h1>{t("title")}</h1>
       <Quiz questions={myQuestions} onQuizComplete={handleQuizComplete} />
     </div>
