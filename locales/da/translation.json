@@ -18,7 +18,7 @@
   },
   "signupQuestions": {
     "1": {
-      "question": "Hvilken jndosodscdsv?",
+      "question": "Hvilken signup?",
       "options": [
         "1",
         "2",
@@ -29,7 +29,7 @@
   },
   "dropinQuestions": {
     "1": {
-      "question": "Hvilken jndosodscdsv?",
+      "question": "Hvilken dropin?",
       "options": [
         "1",
         "2",
