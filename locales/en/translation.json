@@ -1,0 +1,23 @@
+{
+  "title": "tiltle quiz",
+  
+  "quiz": {
+    "questionProgress": "Question {{current}} of {{total}}",
+    "playSound": "Play sound",
+    "next": "Next",
+    "finish": "Finish",
+    "quizFinished": "Quiz Finished!",
+    "finalScore": "Your Final Score: {{score}} / {{total}}"
+  }, 
+  "quizQuestions": {
+    "1": {
+      "question": "What sound do you hear?",
+      "options": [
+        "bird",
+        "giraffe",
+        "rain",
+        "scream"
+      ]
+    }
+  }
+}

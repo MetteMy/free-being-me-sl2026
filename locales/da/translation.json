@@ -1,0 +1,25 @@
+{
+  "title": "Quiz titel",
+
+  
+  "quiz": {
+    "questionProgress": "Spørgsmål {{current}} af {{total}}",
+    "playSound": "Afspil lyd",
+    "next": "Næste",
+    "finish": "Færdiggør",
+    "quizFinished": "Quizzen er slut",
+    "finalScore": "Jeres resultat er: {{score}} / {{total}}"
+  },
+  "quizQuestions": {
+    "1": {
+      "question": "Hvilken jndosodscdsv?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  }
+}
+
