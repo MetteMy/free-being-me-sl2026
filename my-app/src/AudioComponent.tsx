@@ -1,33 +1,9 @@
-import AudioPlayer from 'react-h5-audio-player';
-import useSound from 'use-sound';
+
 import { FaPlay, FaPause } from "react-icons/fa";
 
 import 'react-h5-audio-player/lib/styles.css';
-interface SoundButtonProps {
-  soundUrl: string; 
-  buttonText: string;
-}
-
-// interface OptionProps {
-//     correct: number;
-//     optionList: [];
-// }
 
 
-// export const optionbuttons = ({correct, optionList}: OptionProps) => {
-
-//     return (
-//         {
-//     ((option, index) => (
-//             <button key={index} onClick={() => handleAnswerClick(index)}>
-//               {option}
-//             </button>
-//     }
-// )
-
-
-
-// }
 import { useRef, useState } from "react";
 
 export function SoundButton({ soundUrl }: { soundUrl: string }) {

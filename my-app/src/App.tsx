@@ -1,8 +1,8 @@
 
 import './App.css'
-import {SoundButton } from './AudioComponent'
+
 import boopSfx from '../sounds/Grumpy ghost.m4a';
-import React from 'react';
+
 import { Quiz, type Question } from './QuizComponent';
 import { useTranslation } from 'react-i18next';
 
@@ -58,7 +58,7 @@ export function Header() {
 }
 
 const App = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   
   const handleQuizComplete = (finalScore: number) => {
     console.log(`Quiz Done! Total Score: ${finalScore}`);

@@ -30,9 +30,9 @@ export const Quiz: React.FC<QuizProps> = ({ questions, onQuizComplete }) => {
 
   const currentQuestion = questions[currentIndex];
 
-  const handleSelectOption = (option: string) => {
-    setSelectedOption(option);
-  };
+  // const handleSelectOption = (option: string) => {
+  //   setSelectedOption(option);
+  // };
 
   const handleSubmit = () => {
     setShowResult(true);
