@@ -1,7 +1,13 @@
 {
   "title": "Quiz titel",
 
-  
+  "menu": {
+    "chooseQuiz": "Vælg en aktivitet",
+    "signup": "Tilmeldingsaktivitet",
+    "dropin": "Drop-in aktivitet",
+    "back": "← Tilbage til menuen"
+  },
+
   "quiz": {
     "questionProgress": "Spørgsmål {{current}} af {{total}}",
     "playSound": "Afspil lyd",
@@ -10,7 +16,18 @@
     "quizFinished": "Quizzen er slut",
     "finalScore": "Jeres resultat er: {{score}} / {{total}}"
   },
-  "quizQuestions": {
+  "signupQuestions": {
+    "1": {
+      "question": "Hvilken jndosodscdsv?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "dropinQuestions": {
     "1": {
       "question": "Hvilken jndosodscdsv?",
       "options": [

@@ -1,6 +1,13 @@
 {
   "title": "tiltle quiz",
-  
+
+  "menu": {
+    "chooseQuiz": "Choose an activity",
+    "signup": "Sign-up activity",
+    "dropin": "Drop-in activity",
+    "back": "← Back to menu"
+  },
+
   "quiz": {
     "questionProgress": "Question {{current}} of {{total}}",
     "playSound": "Play sound",
@@ -8,8 +15,19 @@
     "finish": "Finish",
     "quizFinished": "Quiz Finished!",
     "finalScore": "Your Final Score: {{score}} / {{total}}"
-  }, 
-  "quizQuestions": {
+  },
+  "signupQuestions": {
+    "1": {
+      "question": "What sound do you hear?",
+      "options": [
+        "bird",
+        "giraffe",
+        "rain",
+        "scream"
+      ]
+    }
+  },
+  "dropinQuestions": {
     "1": {
       "question": "What sound do you hear?",
       "options": [
