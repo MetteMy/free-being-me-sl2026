@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css'
 
 import boopSfx from '../sounds/Grumpy ghost.m4a';
+import screamSfx from '../sounds/Skrig.m4a';
+import crowSfx from '../sounds/719361__larsnwav__crow-ambience.wav';
 
 import { Quiz, type Question } from './QuizComponent';
 import { useTranslation } from 'react-i18next';
@@ -11,10 +13,11 @@ type ScoutSize = 'big' | 'small';
 
 // Builds one question whose text/options are looked up under the given
 // translation prefix, e.g. "signupQuestions.big" -> "signupQuestions.big.1.question".
-const buildQuestion = (prefix: string): Question => ({
+// `sound` is the imported audio file to play for this question.
+const buildQuestion = (prefix: string, sound: string): Question => ({
   id: 1,
   questionTextKey: `${prefix}.1.question`,
-  QuestionUrl: boopSfx,
+  QuestionUrl: sound,
   optionKeys: [
     `${prefix}.1.options.0`,
     `${prefix}.1.options.1`,
@@ -25,14 +28,15 @@ const buildQuestion = (prefix: string): Question => ({
 });
 
 // Questions per quiz, split by scout size.
+// The second argument to buildQuestion is the sound played for that question.
 const questionSets: Record<QuizId, Record<ScoutSize, Question[]>> = {
   signup: {
-    big: [buildQuestion("signupQuestions.big")],
-    small: [buildQuestion("signupQuestions.small")],
+    big: [buildQuestion("signupQuestions.big", boopSfx)],
+    small: [buildQuestion("signupQuestions.small", screamSfx)],
   },
   dropin: {
-    big: [buildQuestion("dropinQuestions.big")],
-    small: [buildQuestion("dropinQuestions.small")],
+    big: [buildQuestion("dropinQuestions.big", crowSfx)],
+    small: [buildQuestion("dropinQuestions.small", boopSfx)],
   },
 };
 
