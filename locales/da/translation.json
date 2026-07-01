@@ -8,6 +8,12 @@
     "back": "← Tilbage til menuen"
   },
 
+  "scout": {
+    "choose": "Er du en stor spejder eller en lille spejder?",
+    "big": "Stor spejder",
+    "small": "Lille spejder"
+  },
+
   "quiz": {
     "questionProgress": "Spørgsmål {{current}} af {{total}}",
     "playSound": "Afspil lyd",
@@ -17,26 +23,51 @@
     "finalScore": "Jeres resultat er: {{score}} / {{total}}"
   },
   "signupQuestions": {
-    "1": {
-      "question": "Hvilken signup?",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
+    "big": {
+      "1": {
+        "question": "Hvilken signup? (stor spejder)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    "small": {
+      "1": {
+        "question": "Hvilken signup? (lille spejder)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
     }
   },
   "dropinQuestions": {
-    "1": {
-      "question": "Hvilken dropin?",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ]
+    "big": {
+      "1": {
+        "question": "Hvilken dropin? (stor spejder)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    "small": {
+      "1": {
+        "question": "Hvilken dropin? (lille spejder)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
     }
   }
 }
-

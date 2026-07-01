@@ -8,6 +8,12 @@
     "back": "← Back to menu"
   },
 
+  "scout": {
+    "choose": "Are you a big scout or a small scout?",
+    "big": "Big scout",
+    "small": "Small scout"
+  },
+
   "quiz": {
     "questionProgress": "Question {{current}} of {{total}}",
     "playSound": "Play sound",
@@ -17,25 +23,51 @@
     "finalScore": "Your Final Score: {{score}} / {{total}}"
   },
   "signupQuestions": {
-    "1": {
-      "question": "What sound do you hear?",
-      "options": [
-        "bird",
-        "giraffe",
-        "rain",
-        "scream"
-      ]
+    "big": {
+      "1": {
+        "question": "What sound do you hear? (sign-up, big scout)",
+        "options": [
+          "bird",
+          "giraffe",
+          "rain",
+          "scream"
+        ]
+      }
+    },
+    "small": {
+      "1": {
+        "question": "What sound do you hear? (sign-up, small scout)",
+        "options": [
+          "bird",
+          "giraffe",
+          "rain",
+          "scream"
+        ]
+      }
     }
   },
   "dropinQuestions": {
-    "1": {
-      "question": "What sound do you hear?",
-      "options": [
-        "bird",
-        "giraffe",
-        "rain",
-        "scream"
-      ]
+    "big": {
+      "1": {
+        "question": "What sound do you hear? (drop-in, big scout)",
+        "options": [
+          "bird",
+          "giraffe",
+          "rain",
+          "scream"
+        ]
+      }
+    },
+    "small": {
+      "1": {
+        "question": "What sound do you hear? (drop-in, small scout)",
+        "options": [
+          "bird",
+          "giraffe",
+          "rain",
+          "scream"
+        ]
+      }
     }
   }
 }
