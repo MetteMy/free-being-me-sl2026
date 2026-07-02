@@ -11,32 +11,41 @@ import { useTranslation } from 'react-i18next';
 type QuizId = 'signup' | 'dropin';
 type ScoutSize = 'big' | 'small';
 
-// Builds one question whose text/options are looked up under the given
-// translation prefix, e.g. "signupQuestions.big" -> "signupQuestions.big.1.question".
-// `sound` is the imported audio file to play for this question.
-const buildQuestion = (prefix: string, sound: string): Question => ({
-  id: 1,
-  questionTextKey: `${prefix}.1.question`,
+
+const buildQuestion = (prefix: string, num: number, sound: string): Question => ({
+  id: num,
+  questionTextKey: `${prefix}.${num}.question`,
   QuestionUrl: sound,
   optionKeys: [
-    `${prefix}.1.options.0`,
-    `${prefix}.1.options.1`,
-    `${prefix}.1.options.2`,
-    `${prefix}.1.options.3`,
+    `${prefix}.${num}.options.0`,
+    `${prefix}.${num}.options.1`,
+    `${prefix}.${num}.options.2`,
+    `${prefix}.${num}.options.3`,
   ],
-  correctAnswerKey: `${prefix}.1.options.0`,
+  correctAnswerKey: `${prefix}.${num}.options.0`,
 });
 
-// Questions per quiz, split by scout size.
-// The second argument to buildQuestion is the sound played for that question.
+
 const questionSets: Record<QuizId, Record<ScoutSize, Question[]>> = {
   signup: {
-    big: [buildQuestion("signupQuestions.big", boopSfx)],
-    small: [buildQuestion("signupQuestions.small", screamSfx)],
+    big: [
+      buildQuestion("signupQuestions.big", 1, boopSfx),
+      buildQuestion("signupQuestions.big", 2, screamSfx),
+    ],
+    small: [
+      buildQuestion("signupQuestions.small", 1, screamSfx),
+      buildQuestion("signupQuestions.small", 2, crowSfx),
+    ],
   },
   dropin: {
-    big: [buildQuestion("dropinQuestions.big", crowSfx)],
-    small: [buildQuestion("dropinQuestions.small", boopSfx)],
+    big: [
+      buildQuestion("dropinQuestions.big", 1, crowSfx),
+      buildQuestion("dropinQuestions.big", 2, boopSfx),
+    ],
+    small: [
+      buildQuestion("dropinQuestions.small", 1, boopSfx),
+      buildQuestion("dropinQuestions.small", 2, screamSfx),
+    ],
   },
 };
 

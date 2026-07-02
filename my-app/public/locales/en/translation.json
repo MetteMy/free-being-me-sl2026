@@ -25,23 +25,41 @@
   "signupQuestions": {
     "big": {
       "1": {
-        "question": "What sound do you hear? (sign-up, big scout)",
+        "question": "What sound do you hear? (sign-up, big scout, Q1)",
         "options": [
           "bird",
           "giraffe",
           "rain",
           "scream"
         ]
+      },
+      "2": {
+        "question": "What sound do you hear? (sign-up, big scout, Q2)",
+        "options": [
+          "cat",
+          "dog",
+          "thunder",
+          "wind"
+        ]
       }
     },
     "small": {
       "1": {
-        "question": "What sound do you hear? (sign-up, small scout)",
+        "question": "What sound do you hear? (sign-up, small scout, Q1)",
         "options": [
           "bird",
           "giraffe",
           "rain",
           "scream"
+        ]
+      },
+      "2": {
+        "question": "What sound do you hear? (sign-up, small scout, Q2)",
+        "options": [
+          "cat",
+          "dog",
+          "thunder",
+          "wind"
         ]
       }
     }
@@ -49,23 +67,41 @@
   "dropinQuestions": {
     "big": {
       "1": {
-        "question": "What sound do you hear? (drop-in, big scout)",
+        "question": "What sound do you hear? (drop-in, big scout, Q1)",
         "options": [
           "bird",
           "giraffe",
           "rain",
           "scream"
         ]
+      },
+      "2": {
+        "question": "What sound do you hear? (drop-in, big scout, Q2)",
+        "options": [
+          "cat",
+          "dog",
+          "thunder",
+          "wind"
+        ]
       }
     },
     "small": {
       "1": {
-        "question": "What sound do you hear? (drop-in, small scout)",
+        "question": "What sound do you hear? (drop-in, small scout, Q1)",
         "options": [
           "bird",
           "giraffe",
           "rain",
           "scream"
+        ]
+      },
+      "2": {
+        "question": "What sound do you hear? (drop-in, small scout, Q2)",
+        "options": [
+          "cat",
+          "dog",
+          "thunder",
+          "wind"
         ]
       }
     }

@@ -25,7 +25,16 @@
   "signupQuestions": {
     "big": {
       "1": {
-        "question": "Hvilken signup? (stor spejder)",
+        "question": "Hvilken signup? (stor spejder, Q1)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "2": {
+        "question": "Hvilken signup? (stor spejder, Q2)",
         "options": [
           "1",
           "2",
@@ -36,7 +45,16 @@
     },
     "small": {
       "1": {
-        "question": "Hvilken signup? (lille spejder)",
+        "question": "Hvilken signup? (lille spejder, Q1)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "2": {
+        "question": "Hvilken signup? (lille spejder, Q2)",
         "options": [
           "1",
           "2",
@@ -49,7 +67,16 @@
   "dropinQuestions": {
     "big": {
       "1": {
-        "question": "Hvilken dropin? (stor spejder)",
+        "question": "Hvilken dropin? (stor spejder, Q1)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "2": {
+        "question": "Hvilken dropin? (stor spejder, Q2)",
         "options": [
           "1",
           "2",
@@ -60,7 +87,16 @@
     },
     "small": {
       "1": {
-        "question": "Hvilken dropin? (lille spejder)",
+        "question": "Hvilken dropin? (lille spejder, Q1)",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "2": {
+        "question": "Hvilken dropin? (lille spejder, Q2)",
         "options": [
           "1",
           "2",
