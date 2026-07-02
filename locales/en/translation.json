@@ -1,5 +1,5 @@
 {
-  "title": "tiltle quiz",
+  "title": "Free being me SL 2026",
 
   "menu": {
     "chooseQuiz": "Choose an activity",
@@ -25,23 +25,41 @@
   "signupQuestions": {
     "big": {
       "1": {
-        "question": "What sound do you hear? (sign-up, big scout)",
+        "question": "What sound do you hear? (sign-up, big scout, Q1)",
         "options": [
           "bird",
           "giraffe",
           "rain",
           "scream"
         ]
+      },
+      "2": {
+        "question": "What sound do you hear? (sign-up, big scout, Q2)",
+        "options": [
+          "cat",
+          "dog",
+          "thunder",
+          "wind"
+        ]
       }
     },
     "small": {
       "1": {
-        "question": "What sound do you hear? (sign-up, small scout)",
+        "question": "What sound do you hear? (sign-up, small scout, Q1)",
         "options": [
           "bird",
           "giraffe",
           "rain",
           "scream"
+        ]
+      },
+      "2": {
+        "question": "What sound do you hear? (sign-up, small scout, Q2)",
+        "options": [
+          "cat",
+          "dog",
+          "thunder",
+          "wind"
         ]
       }
     }
@@ -49,23 +67,149 @@
   "dropinQuestions": {
     "big": {
       "1": {
-        "question": "What sound do you hear? (drop-in, big scout)",
+        "question": "What sound can you hear?",
         "options": [
-          "bird",
-          "giraffe",
-          "rain",
-          "scream"
+          "A murder of crows (a group)",
+          "A flock of jackdaws",
+          "A colony of rooks",
+          "A flock of pigeons"
+        ]
+      },
+      "2": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A running tap",
+          "A hose used to water plants",
+          "Water being poured into a glass",
+          "The sound of a waterfall"
+        ]
+      },
+      "3": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A badger being startled",
+          "A cow going moo!",
+          "A red deer stag trying to flirt",
+          "A big green frog talking"
+        ]
+      },
+      "4": {
+        "question": "What sound can you hear?",
+        "options": [
+          "Chips being eaten",
+          "Leaves being stepped on",
+          "Crinkling wrapping paper",
+          "Popcorn being eaten"
+        ]
+      },
+      "5": {
+        "question": "What sound can you hear?",
+        "options": [
+          "Bang snaps",
+          "A campfire",
+          "Puffed rice",
+          "Popcorn popping"
+        ]
+      },
+      "6": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A cello",
+          "A clarinet",
+          "A violin",
+          "An oboe"
+        ]
+      },
+      "7": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A power screwdriver",
+          "A hand mixer in a bowl",
+          "A blender",
+          "A power saw"
+        ]
+      },
+      "8": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A toilet flushing",
+          "A tub of water tipping over",
+          "A dishwasher starting up",
+          "Heavy rain"
         ]
       }
     },
     "small": {
       "1": {
-        "question": "What sound do you hear? (drop-in, small scout)",
+        "question": "What sound can you hear?",
         "options": [
-          "bird",
-          "giraffe",
-          "rain",
-          "scream"
+          "Crows",
+          "Owls",
+          "Ducks",
+          "Seagulls"
+        ]
+      },
+      "2": {
+        "question": "What sound can you hear?",
+        "options": [
+          "Rain",
+          "A river",
+          "Water being poured into a glass",
+          "A kettle boiling"
+        ]
+      },
+      "3": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A pig oinking",
+          "A cow going moo!",
+          "A horse neighing",
+          "A donkey"
+        ]
+      },
+      "4": {
+        "question": "What sound can you hear?",
+        "options": [
+          "Chips being eaten",
+          "An apple being eaten",
+          "Paper being crumpled",
+          "Popcorn popping"
+        ]
+      },
+      "5": {
+        "question": "What sound can you hear?",
+        "options": [
+          "Rain",
+          "Bubble wrap",
+          "Fireworks",
+          "Popcorn popping"
+        ]
+      },
+      "6": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A guitar",
+          "A trumpet",
+          "A violin",
+          "A piano"
+        ]
+      },
+      "7": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A power screwdriver",
+          "A hand mixer in a bowl",
+          "A hair dryer",
+          "A vacuum cleaner"
+        ]
+      },
+      "8": {
+        "question": "What sound can you hear?",
+        "options": [
+          "A toilet flushing",
+          "A tub of water tipping over",
+          "A running tap",
+          "Heavy rain"
         ]
       }
     }
