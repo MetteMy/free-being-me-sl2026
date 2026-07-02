@@ -4,6 +4,14 @@ import './App.css'
 import boopSfx from '../sounds/Grumpy ghost.m4a';
 import screamSfx from '../sounds/Skrig.m4a';
 import crowSfx from '../sounds/719361__larsnwav__crow-ambience.wav';
+import water from '../sounds/257957__fillsoko__pouring-water-into-glass.wav'
+import chips from '../sounds/651303__sadisticu__eating-chips.wav'
+import cow from '../sounds/513565__spurioustransients__cow-moo-8.wav'
+import popcorn from '../sounds/91262__kevinflo__popcorn-real.wav'
+import violin from '../sounds/159163__cms4f__violin-in-the-hotel.wav'
+import toilet from '../sounds/404329__inspectorj__toilet-flush-european-distant-lid-up.wav'
+import mixer from '../sounds/90786__kmoon__mixer_pot_motor.wav'
+
 
 import { Quiz, type Question } from './QuizComponent';
 import { useTranslation } from 'react-i18next';
@@ -12,7 +20,13 @@ type QuizId = 'signup' | 'dropin';
 type ScoutSize = 'big' | 'small';
 
 
-const buildQuestion = (prefix: string, num: number, sound: string): Question => ({
+// correctIndex is the 0-based position of the correct option (0 = first option).
+const buildQuestion = (
+  prefix: string,
+  num: number,
+  sound: string,
+  correctIndex = 0
+): Question => ({
   id: num,
   questionTextKey: `${prefix}.${num}.question`,
   QuestionUrl: sound,
@@ -22,7 +36,7 @@ const buildQuestion = (prefix: string, num: number, sound: string): Question => 
     `${prefix}.${num}.options.2`,
     `${prefix}.${num}.options.3`,
   ],
-  correctAnswerKey: `${prefix}.${num}.options.0`,
+  correctAnswerKey: `${prefix}.${num}.options.${correctIndex}`,
 });
 
 
@@ -39,12 +53,24 @@ const questionSets: Record<QuizId, Record<ScoutSize, Question[]>> = {
   },
   dropin: {
     big: [
-      buildQuestion("dropinQuestions.big", 1, crowSfx),
-      buildQuestion("dropinQuestions.big", 2, boopSfx),
+      buildQuestion("dropinQuestions.big", 1, crowSfx, 0),
+      buildQuestion("dropinQuestions.big", 2, water, 2),
+      buildQuestion("dropinQuestions.big", 3, cow, 1),
+      buildQuestion("dropinQuestions.big", 4, chips, 0),
+      buildQuestion("dropinQuestions.big", 5, popcorn, 3),
+      buildQuestion("dropinQuestions.big", 6, violin, 2),
+      buildQuestion("dropinQuestions.big", 7, mixer, 1),
+      buildQuestion("dropinQuestions.big", 8, toilet, 0),
     ],
     small: [
-      buildQuestion("dropinQuestions.small", 1, boopSfx),
-      buildQuestion("dropinQuestions.small", 2, screamSfx),
+      buildQuestion("dropinQuestions.small", 1, crowSfx, 0),
+      buildQuestion("dropinQuestions.small", 2, water, 2),
+      buildQuestion("dropinQuestions.small", 3, cow, 1),
+      buildQuestion("dropinQuestions.small", 4, chips, 0),
+      buildQuestion("dropinQuestions.small", 5, popcorn, 3),
+      buildQuestion("dropinQuestions.small", 6, violin, 2),
+      buildQuestion("dropinQuestions.small", 7, mixer, 1),
+      buildQuestion("dropinQuestions.small", 8, toilet, 0),
     ],
   },
 };

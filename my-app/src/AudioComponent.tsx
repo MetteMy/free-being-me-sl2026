@@ -4,26 +4,36 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import 'react-h5-audio-player/lib/styles.css';
 
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function SoundButton({ soundUrl }: { soundUrl: string }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const toggle = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio(soundUrl);
+  // Rebuild the audio whenever the sound changes (e.g. moving to the next question).
+  useEffect(() => {
+    const audio = new Audio(soundUrl);
+    audioRef.current = audio;
+    setIsPlaying(false);
 
-      audioRef.current.addEventListener("ended", () => {
-        setIsPlaying(false);
-      });
-    }
+    const onEnded = () => setIsPlaying(false);
+    audio.addEventListener("ended", onEnded);
+
+    return () => {
+      audio.pause();
+      audio.removeEventListener("ended", onEnded);
+    };
+  }, [soundUrl]);
+
+  const toggle = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
     if (isPlaying) {
-      audioRef.current.pause();
+      audio.pause();
       setIsPlaying(false);
     } else {
-      audioRef.current.play();
+      audio.play();
       setIsPlaying(true);
     }
   };

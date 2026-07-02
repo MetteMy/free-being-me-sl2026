@@ -67,43 +67,152 @@
   "dropinQuestions": {
     "big": {
       "1": {
-        "question": "Hvilken dropin? (stor spejder, Q1)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "Et mord af krager (en gruppe)",
+          "En flok Alliker",
+          "En koloni Råger",
+          "En flok Duer"
         ]
       },
       "2": {
-        "question": "Hvilken dropin? (stor spejder, Q2)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "En tændt vandhane",
+          "En vandslange der bruges til at vande planter",
+          "Vand der bliver hældt op i et glas",
+          "Lyden af et vandfald"
         ]
-      }
+      },
+      "3": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En grævling der bliver forskrækket",
+          "En ko der siger muuuh!",
+          "En kronhjort der prøver at flirte",
+          "En stor grøn frø, der snakker"
+        ]
+      },
+      "4": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Chips der bliver spist",
+          "Blade der bliver trådt på",
+          "Knitrende gavepapir",
+          "Popcorn der bliver spist"
+        ]
+      },
+      "5": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Knaldperler",
+          "Et lejrbål",
+          "Poppede ris",
+          "Popcorn der popper"
+        ]
+      },
+      "6": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En cello",
+          "En klarinet",
+          "En violin",
+          "En obo"
+        ]
+      },
+      "7": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En skruemaskine",
+          "En håndmixer i en skål",
+          "En blender",
+          "En motoriseret sav"
+        ]
+      },
+      "8": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Et toilet der skyller ud",
+          "En balje vand der vælter",
+          "En opvaskemaskine der starter",
+          "Voldsomt regnvejr"
+        ]
+      }      
+
     },
     "small": {
       "1": {
-        "question": "Hvilken dropin? (lille spejder, Q1)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "Krager",
+          "Ugler",
+          "Ænder",
+          "Måger"
         ]
       },
       "2": {
-        "question": "Hvilken dropin? (lille spejder, Q2)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "Regnvejr",
+          "En flod",
+          "Vand der bliver hældt op i et glas",
+          "En elkedel der koger"
         ]
-      }
+      },
+      "3": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En gris der øffer",
+          "En ko der siger Muuuh!",
+          "En hest der vrinsker",
+          "Et æsel"
+        ]
+      },
+      "4": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Chips der bliver spist",
+          "Et æble der bliver spist",
+          "Papir der bliver krøllet",
+          "Popcorn der popper"
+        ]
+      },
+      "5": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Regnvejr",
+          "Bubblewrap",
+          "fyrværkeri",
+          "Popcorn der popper"
+        ]
+      },
+      "6": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En guitar",
+          "En trompet",
+          "En violin",
+          "Et klaver"
+        ]
+      },
+      "7": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En skruemaskine",
+          "En håndmixer i en skål",
+          "En hårtørrer",
+          "En støvsuger"
+        ]
+      },
+      "8": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Et toilet der skyller ud",
+          "En balje vand der vælter",
+          "En tændt vandhane",
+          "Voldsomt regnvejr"
+        ]
+      }      
     }
   }
 }
