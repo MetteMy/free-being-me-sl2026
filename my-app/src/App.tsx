@@ -152,6 +152,7 @@ const App = () => {
             >
               {t("scout.big")}
             </button>
+            
             <button
               className="button--yellow"
               onClick={() => setScoutSize("small")}

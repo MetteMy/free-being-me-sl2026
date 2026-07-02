@@ -182,3 +182,25 @@
     border-right-color: var(--border);
   }
 }
+.scout-select-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px auto 0;
+  width: 100%;
+  max-width: 360px;
+}
+
+.scout-select-buttons .button--yellow {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+}
+
+/* Side by side once there's room on larger screens */
+@media (min-width: 600px) {
+  .scout-select-buttons {
+    flex-direction: row;
+    max-width: 520px;
+  }
+}
