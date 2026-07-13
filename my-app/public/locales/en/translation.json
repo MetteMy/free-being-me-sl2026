@@ -23,46 +23,120 @@
     "finalScore": "Your Final Score: {{score}} / {{total}}"
   },
   "signupQuestions": {
-    "big": {
-      "1": {
-        "question": "What sound do you hear? (sign-up, big scout, Q1)",
-        "options": [
-          "bird",
-          "giraffe",
-          "rain",
-          "scream"
-        ]
-      },
-      "2": {
-        "question": "What sound do you hear? (sign-up, big scout, Q2)",
-        "options": [
-          "cat",
-          "dog",
-          "thunder",
-          "wind"
-        ]
-      }
+
+  "big": {
+    "1": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A pig oinking",
+        "A donkey",
+        "A wild boar",
+        "A goat"
+      ]
     },
-    "small": {
-      "1": {
-        "question": "What sound do you hear? (sign-up, small scout, Q1)",
-        "options": [
-          "bird",
-          "giraffe",
-          "rain",
-          "scream"
-        ]
-      },
-      "2": {
-        "question": "What sound do you hear? (sign-up, small scout, Q2)",
-        "options": [
-          "cat",
-          "dog",
-          "thunder",
-          "wind"
-        ]
-      }
+    "2": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A waterfall",
+        "Rain",
+        "Waves on a beach",
+        "Wind in the trees"
+      ]
+    },
+    "3": {
+      "question": "What sound can you hear?",
+      "options": [
+        "Pelicans",
+        "A flock of swans taking off",
+        "An old airplane starting",
+        "Ducks"
+      ]
+    },
+    "4": {
+      "question": "What sound can you hear?",
+      "options": [
+        "An airplane",
+        "A wind turbine",
+        "A helicopter",
+        "Wind"
+      ]
+    },
+    "5": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A reception desk bell",
+        "A doorbell",
+        "A cash register",
+        "A bicycle bell"
+      ]
+    },
+    "6": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A train starting",
+        "A rocket launching",
+        "A bus",
+        "A tram"
+      ]
     }
+  },
+  "small": {
+    "1": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A pig oinking",
+        "A donkey",
+        "A cow",
+        "A goat"
+      ]
+    },
+    "2": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A waterfall",
+        "Rain",
+        "Waves on a beach",
+        "Water being poured into a glass"
+      ]
+    },
+    "3": {
+      "question": "What sound can you hear?",
+      "options": [
+        "Pelicans",
+        "A flock of swans taking off",
+        "An old airplane starting",
+        "A flock of pigeons"
+      ]
+    },
+    "4": {
+      "question": "What sound can you hear?",
+      "options": [
+        "An airplane",
+        "A wind turbine",
+        "A helicopter",
+        "Wind"
+      ]
+    },
+    "5": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A church bell",
+        "A doorbell",
+        "A cash register",
+        "A bicycle bell"
+      ]
+    },
+    "6": {
+      "question": "What sound can you hear?",
+      "options": [
+        "A train starting",
+        "A rocket launching",
+        "A bus",
+        "A tram"
+      ]
+    }
+  }
+
   },
   "dropinQuestions": {
     "big": {

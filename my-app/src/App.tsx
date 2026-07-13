@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css'
 
-import boopSfx from '../sounds/Grumpy ghost.m4a';
-import screamSfx from '../sounds/Skrig.m4a';
+// import boopSfx from '../sounds/grumpy-ghost.m4a';
+// import screamSfx from '../sounds/Skrig.m4a';
 import crowSfx from '../sounds/719361__larsnwav__crow-ambience.wav';
 import water from '../sounds/257957__fillsoko__pouring-water-into-glass.wav'
 import chips from '../sounds/651303__sadisticu__eating-chips.wav'
@@ -11,6 +11,12 @@ import popcorn from '../sounds/91262__kevinflo__popcorn-real.wav'
 import violin from '../sounds/159163__cms4f__violin-in-the-hotel.wav'
 import toilet from '../sounds/404329__inspectorj__toilet-flush-european-distant-lid-up.wav'
 import mixer from '../sounds/90786__kmoon__mixer_pot_motor.wav'
+import pig from '../sounds/692838__brunoauzet__pigs.wav'
+import waves from '../sounds/waves.m4a'
+import swans from '../sounds/858476__klankbeeld__mute-swans-take-off-from-the-water-lake-alphen-gelderland-netherlands1006-am-260611_0124.wav'
+import windmill from '../sounds/830369__siriusparsec__windmill.wav'
+import bikebell from '../sounds/734182__geoff-bremner-audio__bike-bell-during-ride.wav'
+import train from '../sounds/tog (1).m4a'
 
 
 import { Quiz, type Question } from './QuizComponent';
@@ -43,12 +49,20 @@ const buildQuestion = (
 const questionSets: Record<QuizId, Record<ScoutSize, Question[]>> = {
   signup: {
     big: [
-      buildQuestion("signupQuestions.big", 1, boopSfx),
-      buildQuestion("signupQuestions.big", 2, screamSfx),
+      buildQuestion("signupQuestions.big", 1, pig, 0),
+      buildQuestion("signupQuestions.big", 2, waves, 2),
+      buildQuestion("signupQuestions.big", 3, swans, 1),
+      buildQuestion("signupQuestions.big", 4, windmill, 1),
+      buildQuestion("signupQuestions.big", 5, bikebell, 3),
+      buildQuestion("signupQuestions.big", 6, train, 0),
     ],
     small: [
-      buildQuestion("signupQuestions.small", 1, screamSfx),
-      buildQuestion("signupQuestions.small", 2, crowSfx),
+      buildQuestion("signupQuestions.small", 1, pig, 0),
+      buildQuestion("signupQuestions.small", 2, waves, 2),
+      buildQuestion("signupQuestions.small", 3, swans, 1),
+      buildQuestion("signupQuestions.small", 4, windmill, 1),
+      buildQuestion("signupQuestions.small", 5, bikebell, 3),
+      buildQuestion("signupQuestions.small", 6, train, 0),
     ],
   },
   dropin: {
@@ -152,7 +166,7 @@ const App = () => {
             >
               {t("scout.big")}
             </button>
-            
+
             <button
               className="button--yellow"
               onClick={() => setScoutSize("small")}

@@ -25,41 +25,113 @@
   "signupQuestions": {
     "big": {
       "1": {
-        "question": "Hvilken signup? (stor spejder, Q1)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "En gris der øffer",
+          "Et æsel",
+          "Et vildsvin",
+          "En ged"
         ]
       },
       "2": {
-        "question": "Hvilken signup? (stor spejder, Q2)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "Et vandfald",
+          "Regnvejr",
+          "Bølger på en strand",
+          "Vind i træerne"
+        ]
+      },
+      "3": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Pelikaner",
+          "En flok svaner der letter",
+          "Et gammelt fly der starter",
+          "Ænder"
+        ]
+      },
+      "4": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Et fly ",
+          "En vindmølle",
+          "En helikopter",
+          "vind"
+        ]
+      },
+      "5": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En receptions klokke",
+          "En dørklokke",
+          "Et kasseapperat",
+          "En cykelklokke"
+        ]
+      },
+      "6": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Et tog der sætter i gang",
+          "En rumraket",
+          "En bus",
+          "En sporvogn"
         ]
       }
     },
     "small": {
       "1": {
-        "question": "Hvilken signup? (lille spejder, Q1)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "En gris der øffer",
+          "Et æsel",
+          "En ko",
+          "En ged"
         ]
       },
       "2": {
-        "question": "Hvilken signup? (lille spejder, Q2)",
+        "question": "Hvilken lyd kan i høre?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "Et vandfald",
+          "Regnvejr",
+          "Bølger på en strand",
+          "Vand der hældes i et glas"
+        ]
+      },
+      "3": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Pelikaner",
+          "En flok svaner der letter",
+          "Et gammelt fly der starter",
+          "En flok Duer"
+        ]
+      },
+      "4": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Et fly",
+          "En vindmølle",
+          "En helikopter",
+          "vind"
+        ]
+      },
+      "5": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "En kirkeklokke",
+          "En dørklokke",
+          "Et kasseapperat",
+          "En cykelklokke"
+        ]
+      },
+      "6": {
+        "question": "Hvilken lyd kan i høre?",
+        "options": [
+          "Et tog der sætter i gang",
+          "En rumraket",
+          "En bus",
+          "En sporvogn"
         ]
       }
     }
