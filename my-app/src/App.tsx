@@ -16,7 +16,7 @@ import waves from '../sounds/waves.m4a'
 import swans from '../sounds/858476__klankbeeld__mute-swans-take-off-from-the-water-lake-alphen-gelderland-netherlands1006-am-260611_0124.wav'
 import windmill from '../sounds/830369__siriusparsec__windmill.wav'
 import bikebell from '../sounds/734182__geoff-bremner-audio__bike-bell-during-ride.wav'
-import train from '../sounds/tog (1).m4a'
+import train from '../sounds/tog.m4a'
 
 
 import { Quiz, type Question } from './QuizComponent';
